@@ -77,5 +77,5 @@ Big thanks to all people who have helped me. Here is a list of resources where I
 
 ## And Last but not Least!!
 
-Thanks to the Team of Udacity, Google and React - To give me the possibility to learn from you ! 
+Thanks to the Team of Trash Hero Koh Kood to encurage this project! 
 
