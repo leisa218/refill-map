@@ -79,6 +79,7 @@ class MapWrapper extends Component {
       const mapNode = ReactDOM.findDOMNode(mapReference);
       const mapSettings = Object.assign({},{
         center: this.state.initialCenter,
+        mapTypeId: 'satellite',
         zoom: 1
       })
 
