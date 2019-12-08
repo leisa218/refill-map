@@ -61,6 +61,9 @@ $yellow: #ffeb3b;
 .sidenav{
 	.slide-nav-introduction{
 		padding:0 15px;
+		h3{
+			font-size:1.4em;
+		}
 	}
 	.side-nav{
 		a{
@@ -102,6 +105,31 @@ $yellow: #ffeb3b;
 			color:$yellow !important
 		}
 	}
+}
+.gm-style-iw-d{
+	h4{
+		color:$black;
+		background:$yellow;
+		font-size:24px;
+		padding:10px 15px;
+		font-family:'Open Sans';
+		border:1px solid $black;
+	}
+	p{
+		text-align:center;
+		font-size:1.2em;
+	}
+}
+.gm-style-iw{
+	button{
+		width:40px!important;
+		top:0px!important;
+		right:0px!important;
+		img{
+			width:25px!important;
+			height:25px!important;
+		}
+	}	
 }
 
 // responsive behaviors

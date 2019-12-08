@@ -1,6 +1,6 @@
 {
   "homepage": "https://bottle-refill.rocks/",
-  "name": "test-map",
+  "name": "refill-map",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

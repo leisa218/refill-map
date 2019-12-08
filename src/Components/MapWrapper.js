@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import {Map} from 'google-maps-react';
-import * as WeatherAPI from '../Utils/WeatherAPI'
 import SideNavWrapper from './SideNavWrapper'
 import NavBarWrapper from './NavBarWrapper'
 import MapFailed from './MapFailed'
@@ -14,23 +13,23 @@ class MapWrapper extends Component {
   state = {
     map:{},
     locations: [
-      {title: 'Ban Bua Cottage, Thailand', location: {lat: 11.665669, lng: 102.536357}},
-      {title: 'BB Divers, Thailand', location: {lat: 11.632421, lng: 102.547440}},
-      {title: 'BB Dorm, Thailand', location: {lat: 11.632400, lng: 102.547408}},
-      {title: 'Big Dreams Resort, Thailand', location: {lat: 11.625287, lng: 102.546876}},
-      {title: 'Captain Nhong Seafood & Homestay, Thailand', location: {lat: 11.707709, lng: 102.571211}},
-      {title: 'Eve House, Thailand', location: {lat: 11.609061, lng: 102.544243}},
-      {title: 'Happy Days Guesthouse, Thailand', location: {lat: 11.624801, lng: 102.546994}},
-      {title: 'Mermaid Fashion & Cafe, Thailand', location: {lat: 11.659266, lng: 102.539536}},
-      {title: 'Paradise Divers - Koh Kood, Thailand', location: {lat: 11.625006, lng: 102.546685}},
-      {title: 'Peterpan Resort, Thailand', location: {lat: 11.634626, lng: 102.545739}},
-      {title: 'Seafar Resort, Thailand', location: {lat: 11.650647, lng: 102.535500}},
-      {title: 'Shantaa Resort, Thailand', location: {lat: 11.654611, lng: 102.533018}},
-      {title: 'Wooden Hut, Thailand', location: {lat: 11.608840, lng: 102.545173}},
-      {title: 'Kuba Lounge, Thailand', location: {lat: 11.609090, lng: 102.547124}},
-      {title: 'Wave F, Thailand', location: {lat: 11.664032, lng: 102.536331}},
-      {title: 'Koh Kood Guesthouse, Thailand', location: {lat: 11.675546, lng: 102.541105}},
-      {title: 'A la Koh Kood, Thailand', location: {lat: 11.597153, lng: 102.551352}}
+      {title: 'Ban Bua Cottage', location: {lat: 11.665669, lng: 102.536357}},
+      {title: 'BB Divers', location: {lat: 11.632421, lng: 102.547440}},
+      {title: 'BB Dorm', location: {lat: 11.632400, lng: 102.547408}},
+      {title: 'Big Dreams Resort', location: {lat: 11.625287, lng: 102.546876}},
+      {title: 'Captain Nhong Seafood & Homestay', location: {lat: 11.707709, lng: 102.571211}},
+      {title: 'Eve House', location: {lat: 11.609061, lng: 102.544243}},
+      {title: 'Happy Days Guesthouse', location: {lat: 11.624801, lng: 102.546994}},
+      {title: 'Mermaid Fashion & Cafe', location: {lat: 11.659266, lng: 102.539536}},
+      {title: 'Paradise Divers - Koh Kood', location: {lat: 11.625006, lng: 102.546685}},
+      {title: 'Peterpan Resort', location: {lat: 11.634626, lng: 102.545739}},
+      {title: 'Seafar Resort', location: {lat: 11.650647, lng: 102.535500}},
+      {title: 'Shantaa Resort', location: {lat: 11.654611, lng: 102.533018}},
+      {title: 'Wooden Hut', location: {lat: 11.608840, lng: 102.545173}},
+      {title: 'Kuba Lounge', location: {lat: 11.609090, lng: 102.547124}},
+      {title: 'Wave F', location: {lat: 11.664032, lng: 102.536331}},
+      {title: 'Koh Kood Guesthouse', location: {lat: 11.675546, lng: 102.541105}},
+      {title: 'A la Koh Kood', location: {lat: 11.597153, lng: 102.551352}}
 
 
 
@@ -207,10 +206,12 @@ class MapWrapper extends Component {
 
 
         // select Elements from the result
-        let locationCats = location.map((e) => e.types).join(',  ')
-        let locationAddress = location.map((l) => l.formatted_address).join(',  ')
+        //let locationCats = location.map((e) => e.types).join(',  ')
+        //let locationAddress = location.map((l) => l.formatted_address).join(',  ')
+        
         // keep for later improvement
         //let locationCountry = locationAddress.split(/[, ]+/).pop();
+
         let lat = '';
         let lng = '';
         location.forEach((l) =>{
@@ -220,6 +221,7 @@ class MapWrapper extends Component {
        
         // to do: refactor to external function
         // get Conten from external API
+        /*
         let apiContent = '<div id="api">...loading</div>'
         WeatherAPI.getAll(lat,lng).then((data) => {
           this.setState({weatherdata: data})
@@ -249,8 +251,11 @@ class MapWrapper extends Component {
             apiContent = '<div id="api">Sorry!! Something went wrong when requesting the Weather data. Probalby the limit of daily requests is exeeded.</div>';
             largInfoWindow.setContent('<h4>'+locationName + '</h4><hr /><p><small>Address:</small><br />'+ locationAddress+ '</p><p><small>Categories:</small><br />'+locationCats+'</p><hr />'+ apiContent);
         })
+        */
         
-        largInfoWindow.setContent('<h4>'+locationName + '</h4><hr /><p><small>Address:</small><br />'+ locationAddress+ '</p><p><small>Categories:</small><br />'+locationCats+'</p>');
+        //largInfoWindow.setContent('<h4>'+locationName + '</h4><hr /><p><small>Address:</small><br />'+ locationAddress+ '</p><p><small>Categories:</small><br />'+locationCats+'</p>');
+
+        largInfoWindow.setContent('<p>-- Visit us --</p><hr><h4>'+locationName + '</h4><hr><p>-- We refill your bottle --</p>');
         
         // Clear the marker property when closed
         largInfoWindow.addListener("closeclick", () => {

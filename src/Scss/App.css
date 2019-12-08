@@ -6677,6 +6677,8 @@ button.picker__close:focus {
 
 .sidenav .slide-nav-introduction {
   padding: 0 15px; }
+  .sidenav .slide-nav-introduction h3 {
+    font-size: 1.4em; }
 
 .sidenav .side-nav a#close-btn {
   padding: 5px 14px 0 14px; }
@@ -6705,6 +6707,26 @@ button.picker__close:focus {
     margin-top: 20%; }
   .api-failure div.error_wrapper a {
     color: #ffeb3b !important; }
+
+.gm-style-iw-d h4 {
+  color: #333;
+  background: #ffeb3b;
+  font-size: 24px;
+  padding: 10px 15px;
+  font-family: 'Open Sans';
+  border: 1px solid #333; }
+
+.gm-style-iw-d p {
+  text-align: center;
+  font-size: 1.2em; }
+
+.gm-style-iw button {
+  width: 40px !important;
+  top: 0px !important;
+  right: 0px !important; }
+  .gm-style-iw button img {
+    width: 25px !important;
+    height: 25px !important; }
 
 @media only screen and (max-width: 992px) {
   .brand-logo {
