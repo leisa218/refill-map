@@ -17,7 +17,6 @@ class SideNavWrapper extends Component {
 
   render() {
     const {markers, populateInWindow} = this.props;
-    console.log(markers);
     return (
       <div className='sidenav'>
           {this.props.data && Array.isArray(this.props.data) && this.props.data.map((data, index) => {
